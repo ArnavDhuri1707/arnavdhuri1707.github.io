@@ -1,8 +1,258 @@
 <!DOCTYPE html>
-<html>
-<head><title>My Portfolio</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arnav Dhuri — Engineering Portfolio</title>
+  <meta name="description" content="Arnav Dhuri — engineering student building robots and energy systems. Projects, experience, and skills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
 <body>
-  <h1>Hi, I'm Arnav</h1>
-  <p>Engineering student building robots & energy systems.</p>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top">AD<span class="accent">.</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container hero-inner">
+        <p class="hero-kicker reveal">Hi, I'm</p>
+        <h1 class="hero-name reveal">Arnav Dhuri</h1>
+        <p class="hero-role reveal">Engineering student building <span class="accent">robots</span> &amp; <span class="accent">energy systems</span>.</p>
+        <p class="hero-blurb reveal">
+          <!-- EDIT: one or two sentences about what you're focused on right now -->
+          I design, prototype, and break things until they work — currently exploring
+          robotics, mechatronics, and sustainable energy.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-kicker reveal">01 — About</p>
+        <div class="about-grid">
+          <div class="reveal">
+            <h2 class="section-title">Curious by default,<br />hands-on by choice.</h2>
+          </div>
+          <div class="about-text reveal">
+            <!-- EDIT: your real background — school, what you study, what excites you -->
+            <p>
+              I'm an engineering student passionate about the intersection of hardware
+              and software — the point where code starts moving things in the real world.
+            </p>
+            <p>
+              Most of my time goes into robotics builds and energy-system experiments:
+              CAD, circuits, firmware, and the occasional 3&nbsp;a.m. debugging session.
+              I care about building things that are reliable, efficient, and genuinely useful.
+            </p>
+            <div class="about-stats">
+              <!-- EDIT: swap these for stats that are true for you -->
+              <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Projects built</span></div>
+              <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Years tinkering</span></div>
+              <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">Competitions</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <p class="section-kicker reveal">02 — Projects</p>
+        <h2 class="section-title reveal">Selected work</h2>
+        <div class="project-grid">
+
+          <!-- EDIT: duplicate/remove these cards for your real projects.
+               Drop images into an /assets folder and set the img src. -->
+          <article class="project-card reveal">
+            <div class="project-media" data-tone="a">
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-body">
+              <h3>Autonomous Line-Following Robot</h3>
+              <p>A PID-controlled robot that navigates a track using IR sensor arrays, tuned for speed and stability.</p>
+              <ul class="tag-row">
+                <li>Arduino</li><li>C++</li><li>PID Control</li>
+              </ul>
+              <a class="project-link" href="https://github.com/arnavdhuri1707" target="_blank" rel="noreferrer">View project <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media" data-tone="b">
+              <span class="project-index">02</span>
+            </div>
+            <div class="project-body">
+              <h3>Solar MPPT Charge Controller</h3>
+              <p>Maximum-power-point-tracking charge controller that squeezes extra efficiency out of small solar panels.</p>
+              <ul class="tag-row">
+                <li>Power Electronics</li><li>ESP32</li><li>Buck Converter</li>
+              </ul>
+              <a class="project-link" href="https://github.com/arnavdhuri1707" target="_blank" rel="noreferrer">View project <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media" data-tone="c">
+              <span class="project-index">03</span>
+            </div>
+            <div class="project-body">
+              <h3>Robotic Arm with Inverse Kinematics</h3>
+              <p>3D-printed 4-DOF arm driven by servo motors, with inverse-kinematics solving for smooth pick-and-place moves.</p>
+              <ul class="tag-row">
+                <li>Python</li><li>Fusion 360</li><li>Servos</li>
+              </ul>
+              <a class="project-link" href="https://github.com/arnavdhuri1707" target="_blank" rel="noreferrer">View project <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-media" data-tone="d">
+              <span class="project-index">04</span>
+            </div>
+            <div class="project-body">
+              <h3>Home Energy Monitor</h3>
+              <p>Real-time energy monitoring dashboard using current transformers and a web front-end for usage insights.</p>
+              <ul class="tag-row">
+                <li>ESP32</li><li>MQTT</li><li>JavaScript</li>
+              </ul>
+              <a class="project-link" href="https://github.com/arnavdhuri1707" target="_blank" rel="noreferrer">View project <span class="arrow">→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-kicker reveal">03 — Experience &amp; Education</p>
+        <h2 class="section-title reveal">Where I've been</h2>
+        <div class="timeline">
+
+          <!-- EDIT: your real experience / education entries -->
+          <div class="timeline-item reveal">
+            <div class="timeline-when">2024 — Present</div>
+            <div class="timeline-what">
+              <h3>Robotics Club — Member / Builder</h3>
+              <p class="timeline-org">School / University name</p>
+              <p>Designing and building competition robots; responsible for drivetrain design and control code.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-when">2023 — Present</div>
+            <div class="timeline-what">
+              <h3>Engineering Student</h3>
+              <p class="timeline-org">School / University name</p>
+              <p>Focus on mechatronics, electronics, and sustainable energy systems.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-when">2023</div>
+            <div class="timeline-what">
+              <h3>Science Fair / Competition</h3>
+              <p class="timeline-org">Event name</p>
+              <p>Presented an energy-systems project; add your award or result here.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="section-kicker reveal">04 — Skills</p>
+        <h2 class="section-title reveal">Toolbox</h2>
+        <div class="skills-grid">
+
+          <!-- EDIT: adjust categories and items to match your real skillset -->
+          <div class="skill-group reveal">
+            <h3>Hardware &amp; Fabrication</h3>
+            <ul class="tag-row">
+              <li>Arduino</li><li>ESP32</li><li>Raspberry Pi</li><li>Soldering</li><li>3D Printing</li><li>Circuit Design</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Software</h3>
+            <ul class="tag-row">
+              <li>Python</li><li>C / C++</li><li>JavaScript</li><li>Git</li><li>MATLAB</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>Design &amp; Simulation</h3>
+            <ul class="tag-row">
+              <li>Fusion 360</li><li>SolidWorks</li><li>KiCad</li><li>LTspice</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container contact-inner">
+        <p class="section-kicker reveal">05 — Contact</p>
+        <h2 class="contact-title reveal">Let's build<br />something<span class="accent">.</span></h2>
+        <p class="contact-blurb reveal">
+          Open to collaborations, internships, and interesting conversations
+          about robots or energy.
+        </p>
+        <!-- EDIT: set your real email -->
+        <a class="contact-email reveal" href="mailto:sampada_dhuri@yahoo.com">sampada_dhuri@yahoo.com</a>
+        <div class="socials reveal">
+          <!-- EDIT: your real profile links -->
+          <a href="https://github.com/arnavdhuri1707" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/your-username" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Arnav Dhuri</span>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="src/main.js"></script>
 </body>
 </html>
